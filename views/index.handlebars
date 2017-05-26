@@ -1,0 +1,63 @@
+
+<header>
+	<div class="row">
+		<img class="col-md-3 col-md-offset-1" src="assets/images/sushi_belt.gif" alt="conveyor belt sushi" width="300">
+		<h1 class="col-md-4 ">GRAB-DAT-SUSHI!</h1>
+		<img class="col-md-3" src="assets/images/sushi_plate.gif" alt="conveyor belt sushi" width="300">
+
+	</div>
+</header>
+
+<div class="row">
+	<div id="available" class="col-md-4 col-md-offset-1">
+		<h2>ON CONVEYOR BELT</h2>
+		<ul>
+			{{#each sushis}}
+				{{#unless this.devoured}}
+					<li> 
+						{{this.sushi_name}}
+
+						<form action="/{{this.id}}?_method=PUT" method="POST">
+							<input type="hidden" name="devoured" value="true">
+							<button type="submit">GRAB IT!</button>
+						</form>
+					</li>	
+				{{/unless}}
+			{{/each}}		
+		</ul>
+	</div>
+
+	<div id="grabbed" class="col-md-4 col-md-offset-2">
+		<h2>ON A PLATE</h2>
+		<ul>
+			{{#each sushis}}
+				{{#if this.devoured}}
+					<li>
+						{{this.sushi_name}}
+		
+						<form action="/{{this.id}}?_method=PUT" method="POST">
+							<input type="hidden" name="devoured" value="false">
+							<button type="submit">PUT IT BACK</button>
+						</form>
+					</li>
+				{{/if}}
+			{{/each}}
+		</ul>
+	</div>
+</div> <!--end of main row-->	
+
+<div class="row" >
+	<div id="order" class="col-md-5 col-md-offset-1">
+		<h2>PLACE AN ORDER WITH THE CHEF</h2>
+		<form id="orderSushi" class="create-update-form" action="/" method="POST">
+			<textarea name="order" class="form-control" rows="6"></textarea>
+			<button type="submit" class="btn">Place My Order</button>
+		</form>
+	</div>
+	<div id="menu" class="col-md-5">
+		<h2>MENU</h2>
+		<img class="img-thumbnail" src="assets/images/kawai_sushi.jpg" alt="sushi menu">
+	</div>
+
+		
+</div>

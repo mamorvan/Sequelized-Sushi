@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+body {
+	background-color: #69425A;
+	font-family: "Bangers", sans-serif;
+	color: #69425A;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 100px;
+	padding-top: 50px;
+}
+
+h2 {
+	background-color: #E1454F;
+	text-align: center;
+	border-bottom: 2px solid #69425A;
+	
+	padding: 10px;
+}
+
+button {
+	font-size: 15px;
+	background-color: #F6A09E;
+	border-radius: 5px;
+	width: 100px;
+	margin: 10px 5px 5px 5px;
+}
+
+ul {
+	list-style: none;
+	font-size: 20px;
+}
+
+li{
+	border: 2px solid #69425A;
+	padding: 10px 30px;
+	margin: 5px 20px 5px 0;
+}
+
+header {
+	background-color: #E1454F;
+	text-align: center;
+	padding: 30px;
+	margin: 20px 50px;
+	border-radius: 5px;
+	border: 5px solid #C5DCCE;
+}
+
+#available, #grabbed {
+	background-color: #EBEBBB;
+	text-align: center;
+	padding: 30px;
+	border: 2px solid #69425A;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+#menu, #order {
+	background-color: #C5DCCE;
+	border: 2px solid #69425A;
+	border-radius: 5px;
+	text-align: center;
+	padding: 30px;
+	height: 525px;
+	margin-bottom: 80px;
+}
+
+.img-thumbnail {
+	max-height: 400px;
+}
+
+#order textarea {
+	margin-top: 80px;
+}
+
+
+
