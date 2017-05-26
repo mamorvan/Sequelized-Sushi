@@ -4,7 +4,9 @@ var db = require("../models");
 
 //to show all sushi from db on index.handlebars
 router.get("/", function(req, res) {
-	db.Sushi.findAll({}).then(function(data){
+	db.Sushi.findAll({ 
+		order: [['sushi_name']]
+	}).then(function(data){
 		var sushiObject = {
 			sushis: data
 		}
