@@ -5,16 +5,18 @@ var db = require("../models");
 //to show all sushi from db on index.handlebars
 router.get("/", function(req, res) {
 	db.Sushi.findAll({}).then(function(data){
-		res.render("index", data);
+		var sushiObject = {
+			sushis: data
+		}
+		res.render("index", sushiObject);
 	});
 });
 
 //to add new sushi to db then show new all sushi with redirect to get
 router.post("/", function(req, res) {
 	db.Sushi.create({
-		sushi_name: req.body.sushi_name
+		sushi_name: req.body.order
 	}).then(function(data){
-		res.json(data);
 		res.redirect("/");
 	});
 });
@@ -28,7 +30,6 @@ router.put("/:id", function(req, res) {
 			id: req.params.id
 		}
 	}).then(function(data){
-		res.json(data);
 		res.redirect("/");
 	});
 });
