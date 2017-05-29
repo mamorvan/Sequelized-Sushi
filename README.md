@@ -6,5 +6,5 @@
 **You can also place a custom order with the sushi chef and it will end up on the conveyor belt for you.**
 
 
-:sushi:[Try it here](https://boiling-lake-60283.herokuapp.com/):sushi:.
+:sushi:[Try it here](https://mighty-shelf-66334.herokuapp.com/):sushi:.
 
