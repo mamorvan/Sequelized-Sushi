@@ -2,8 +2,11 @@ module.exports = function(sequelize, DataTypes){
 	var Sushi = sequelize.define("Sushi", {
 		sushi_name: {
 			type: DataTypes.STRING,
-			allowNull: false,
-			notEmpty: true
+			validate: {
+				notEmpty: true,
+				is: /^[a-z]+$/i
+			}
+
 		},
 		devoured: {
 			type: DataTypes.BOOLEAN,
