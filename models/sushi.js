@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes){
 			type: DataTypes.STRING,
 			validate: {
 				notEmpty: true,
-				is: /^[a-z]+$/i
+				is: /^[a-zA-Z\s]*$/
 			}
 
 		},
